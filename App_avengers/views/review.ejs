@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> review </title>
+   </head>
+   <body>
+    <a href="/ "><button>Home</button></a>
+       <h1>Order Summary</h1>
+       <div>
+           <h1>book</h1>
+         <h2>title: <%= book.title %> <br></h2> 
+          <h2>price: $<%= book.price %> <br></h2>
+          
+     </div>
+        <div>
+            <h1>user</h1>
+            <h2>adress: <%= user.address %> <br></h2>
+            <h2>mobile: <%= user.mobile %><br></h2>
+            
+        </div>
+        <div>
+            <h2>Kindly pay $<%= book.price %> on delivery</h2>
+        </div>
+
+     <a href="/checkout/<%=book._id%>"><button>place order</button></a>
+    </body>
+    </html>

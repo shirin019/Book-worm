@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> book store </title>
+   </head>
+   <body>
+       <h1> <b> books </b> </body></h1>
+       <a href="/admin/orders"> Orders </a>
+       <a href="/admin/addnew"> add new book </a>
+       <% books.forEach((val)=>{ %>
+            <ul> 
+                <li><a  href="/books/<%= val._id %>" > <%= val.title %> </a>
+                    <a href="./admin/edit/<%= val._id %>"> <button>edit</button> </a>
+
+                    <form action="/admin/<%= val._id %>?_method=delete" method="POST">
+                     <button type="submit" onclick='alert("this will be deleted now")'>delete</button> 
+                     </form>  
+                </li>
+                 </ul>  
+
+       <% }) %>
+       
+   </body>
+</html>

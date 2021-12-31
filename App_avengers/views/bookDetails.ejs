@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> <%= book.title %> </title>
+   </head>
+   <body>
+    <a href="/ "><button>Home</button></a> <br>
+    <img src="<%= book.imagePath %>" >
+    <h1> title: <%= book.title %> </h1>
+    <h1> author: <%= book.author %> </h1>
+    <h1>description: <%= book.description %> </h1>
+    <h1>publisher: <%= book.publisher %> </h1>
+    <h1>price: $<%= book.price %> </h1>
+    <a href="/buy/<%=book._id %>"><button>buyNow</button></a>
+   </body>
+</html>
